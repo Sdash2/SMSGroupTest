@@ -1,0 +1,25 @@
+::ng-deep table.mat-table {
+    width: 100%;
+}
+
+#data-container {
+    display: block;
+    width: 80%;
+    margin: 10%;
+}
+
+mat-card-actions {
+    float: right;
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+::ng-deep .mat-menu-panel {
+
+    padding: 2px;
+
+}
