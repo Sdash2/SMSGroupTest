@@ -34,6 +34,13 @@ export class CityListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.dataSource.sortingDataAccessor = (item, property) => {
+      switch (property) {
+         case 'start_date': return new Date(item.start_date);
+         case 'end_date': return new Date(item.end_date);
+         default: return item[property];
+      }
+    };
   }
   public getCityList() {
     this.cityList = [];
