@@ -4,10 +4,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-1. Run `mongod` & `mongo` service in local to enable `MongoDB` service
-2. The JSON data provided was imported into MongoDB in local and hosted the service in `localhost:27017`
-3. I have created an Angular app which contains the List screen UI & services integrated to fetch data, Run `ng serve` for a dev server. Navigate to http://localhost:4200/
+1. UI is built with Angular 10, integrated with `MongoDB` .
+2. The solution contains `server.js` file which handles the DB connection and the API's .
+3. After cloning , Please perform the following tasks in the same order : -
 
+1. `npm install`
+
+2. Open CMD prompt and navigate into this folder , and type `npm run server` - This will allow to run mongoDB connection & API services on port `8080`, but prior to this ensure that `mongod` & `mongo` service is running on port `27017`.
+
+3. In order to setup the data , i have used MongoDB Compass and imported the JSON data.
+
+4. To test the api , one can directly hit the url in browser i.e. => `http://localhost:8080/api/getCitiesList/`
 
 ## Code scaffolding
 
