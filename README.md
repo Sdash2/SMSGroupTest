@@ -4,7 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Run `mongod` & `mongo` service in local to enable `MongoDB` service
+2. The JSON data provided was imported into MongoDB in local and hosted the service in `localhost:27017`
+3. I have created an Angular app which contains the List screen UI & services integrated to fetch data, Run `ng serve` for a dev server. Navigate to http://localhost:4200/
+
 
 ## Code scaffolding
 
