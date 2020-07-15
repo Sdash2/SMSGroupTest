@@ -38,11 +38,11 @@ var citySchema = new mongo.Schema({
   city: {
     type: String
   },
-  startDate: {
-    type: Date
+  start_date: {
+    type: String
   },
-  endDate: {
-    type: Date
+  end_date: {
+    type: String
   },
   price: {
     type: Number
@@ -69,9 +69,9 @@ app.get('/api/getCitiesList', function (req, res) {
 
 app.post('/api/createCity', (req, res) => {
   let newCity = new model({
-    city: req.body.name,
-    startDate: req.body.location,
-    endDate: req.body.ranking,
+    city: req.body.city,
+    start_date: req.body.start_date,
+    end_date: req.body.end_date,
     price: req.body.price,
     status: req.body.status,
     color: req.body.color
@@ -123,8 +123,8 @@ app.post('/api/updateCity/:id', function (req, res) {
       res.send(err);
     } else {
       data[0].city = req.body.city;
-      data[0].startDate = req.body.startDate;
-      data[0].endDate = req.body.endDate;
+      data[0].start_date = req.body.start_date;
+      data[0].end_date = req.body.end_date;
       data[0].price = req.body.price;
       data[0].color = req.body.color;
       data[0].status = req.body.status;
@@ -132,6 +132,6 @@ app.post('/api/updateCity/:id', function (req, res) {
     }
   });
 });
-app.listen(8080, function () {
+app.listen(8080,function () {
   console.log('App Started on port 8080');
 })

@@ -11,7 +11,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./city-list.component.scss']
 })
 export class CityListComponent implements OnInit, AfterViewInit {
-  public displayedColumns: string[] = ['id', 'city', 'startDate', 'endDate', 'price', 'color', 'status'];
+  public displayedColumns: string[] = ['id', 'city', 'start_date', 'end_date', 'price', 'color', 'status'];
   public dataSource = new MatTableDataSource<City>([]);
   @ViewChild('paginator', { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
